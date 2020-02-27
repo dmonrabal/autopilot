@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+ }
+ 
+ html,
+ body {
+     background-color: #fff;
+     color: #bebcbc;
+     font-family: 'Lato', 'Arial', sans-serif;
+ }
+ 
+ .container {
+     display: flex;
+     flex-direction: row;
+     margin: 0;
+     padding: 0;
+     min-height: 100vh;
+     min-width: 100vw;
+ }
+ 
+ .keypad {
+     display: flex;
+     flex-direction: column;
+     flex: 0 0 40vw; 
+     background-color: #f8f6f6;
+ }
+ 
+ .keypad-row {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     flex: 0 0 33.3%; 
+ }
+ 
+ .btn-primary:not(:disabled):not(.disabled):active{
+     color: deepskyblue;
+     background: #1f5284;
+     border-color: rgba(30, 144, 255, 0.92);
+     outline: 0 none;
+ }
+ 
+ .btn-my-active {
+     color: deepskyblue;
+     background: #1f5284;
+     border-color: rgba(30, 144, 255, 0.92);
+     outline: 0 none;
+ }
+ 
+ .btn-primary:active{
+     color: deepskyblue;
+     background: #1f5284;
+     border-color: rgba(30, 144, 255, 0.92);
+     outline: 0 none;
+ }
+ 
+ .btn-keypad {
+     height: 4rem;
+     width: 4rem;
+     font-size: 3rem;
+     border-radius: 50%;
+     margin-left: 10px;
+ }
+ 
+ 
+ .icon-keypad {
+     display: inline-block;
+     text-align: center;
+     /* secrects to align text and icons */
+     vertical-align: middle;
+     margin-top: -35px;
+ }
+ 
+ .icon-nav {
+     padding-right: 8px;
+     font-size: 2rem;
+ }
+ 
+ .servo-pos {
+     height: 4rem;
+     width: 4rem;
+     margin-left: 6px;
+     vertical-align: middle;
+     text-align: center;
+     font-size: 2.5rem;
+     border-radius: 50%;
+     border: 2px solid;
+ }
+ 
+ .data {
+     display: flex;
+     flex-direction: column;
+     flex: 0 0 60vw;
+     background: white;
+ }
+ 
+ .anemometer {
+     display: flex;
+     flex-direction: row;
+     flex: 0 0 66.6%;
+     font-size: 1.5rem;
+     font-weight: bolder;
+ }
+ 
+ .icon-connect {
+     display: flex;
+     flex-direction: column;
+     flex: 0 0 20%;
+     align-items: center;
+     margin-top: 15px;
+ }
+ 
+ .btn-con {
+     margin-bottom: 0.5rem;
+     padding: 1px 1px;
+     width: 3rem;
+     height: 3rem;
+     font-size: 1.75rem;
+     border: none;
+     color: white;
+     background-color: DodgerBlue;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ 
+ .link-paired {
+     margin-bottom: 0.25rem;
+     color: grey;
+     font-size: 2rem;
+     text-align: center;
+ }
+ 
+ .not-visible {
+     display:none;
+ }
+ 
+ .anemometer-param {
+     display: flex;
+     flex-direction: column;
+     flex: 0 0 50%;
+     align-items: flex-end;
+     justify-content: space-around;
+ }
+ 
+ .anemometer-value {
+     display:flex;
+     flex-direction: column;
+     flex: 0 0 25%;
+     justify-content: space-around;
+     margin-left: 0.5em;
+ }
+ 
+ .vel-temp {
+     display:flex;
+     flex-direction: row;
+     flex: 0 0 33.3%;
+     align-items: center;
+     background-color: #faeef0;
+     font-family: 'Lato';
+     font-weight: bold;
+ }
+ 
+ .velocidad {
+     display:flex;
+     flex-direction: row;
+     flex: 0 0 50%;
+     justify-content: center;
+     align-items: baseline;
+ }
+ 
+ .velocidad-val {
+     padding: 2px 6px;
+     margin-left: 2px;
+     padding-left: 2px;
+     font-size: 3.5rem;
+ }
+ 
+ .velocidad-unidad {
+     padding: 2px 6px;
+     font-size: 2rem;
+     vertical-align: bottom;
+ }
+ 
+ 
+ .temperatura {
+     display:flex;
+     flex-direction: row;
+     flex: 0 0 45%;
+     justify-content: center;
+     align-items: baseline;
+ }
+ 
+ .temperatura-val {
+     padding: 1px 1px;
+     font-size: 3rem;
+ }
+ 
+ .temperatura-unidad {
+     padding: 2px 6px;
+     font-size: 2rem;
+ }
+ 
+ 
+ /*--  NOTAS --*/
+ /*
+ 
+ Activar / Desactivar un botón
+ 
+ let subir = document.getElementById("up_pos");
+ 
+ // Activar
+ subir.classList.add('active');
+ 
+ 
+ // Conmutar
+ subir.classList.toggle('active');
+ 
+ // Desabilitar / Habilitar botones
+ 
+ subir.setAttribute("disabled", "true");
+ subir.removeAttribute("disabled");

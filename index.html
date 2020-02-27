@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Aplicación WPA de Bluetooth BLE para auto pilotaje en tablas de surf con foil">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Vendors -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/fontawesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100&display=swap" rel="stylesheet">
+        
+        <!-- Locals resources --> 
+        <link rel="stylesheet" type="text/css" href="resources/css/styles.css"> 
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        
+        <link rel="shortcut icon" type="image/ico" href="/resources/favicons/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="76x76" href="/resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/icon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/icon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        
+        
+        <!--link rel="stylesheet" href="./vendors/fonts/Lato/Lato-Thin.ttf"-->
+        <!--link rel="stylesheet" href="./vendors/fonts/Lato/Lato-Light.ttf"-->
+        <!--link rel="stylesheet" href="./vendors/fonts/Lato/Lato-Thin.ttf"-->
+        <title>Autopilot WPA</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="keypad">
+                <div class="keypad-row">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-keypad" id="auto">
+                             <i class="ion-navigate icon-keypad icon-nav"></i>
+                        </button></div>
+                </div>
+                <div class="keypad-row">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-keypad"  id="up_pos">
+                            <i class="ion-android-arrow-up icon-keypad"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="servo-pos" id="pos_srv">2</div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-keypad" id="down_pos">
+                           <i class="ion-android-arrow-down icon-keypad"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="keypad-row">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-keypad btn-my-active" id="manual">
+                            <i class="ion-android-hand icon-keypad"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="anemometer">
+                    <div class="anemometer-param">
+                        <div>Acelerómetro X</div>
+                        <div>Acelerómetro Y</div>
+                        <div>Acelerómetro Z</div>
+                    </div>
+                    <div class="anemometer-value">
+                       <div id="acx">104</div>
+                        <div id="acy">56</div>
+                        <div id="acz">36</div>
+                    </div>
+                    <div class="icon-connect">
+                        <button class="btn-con btn btn-primary" id="connect">
+                            <i class="ion-bluetooth" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn-con btn btn-primary" id="expand">
+                            <i class="ion-arrow-expand" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn-con btn btn-primary not-visible" id="contract">
+                            <i class="ion-android-contract" aria-hidden="true"></i>
+                        </button>
+
+                        <!--button class="btn-con btn btn-primary not-visible" id="disconnect">
+                            <i class="ion-stop" aria-hidden="true"></i>
+                        </button-->
+
+                        <i class="ion-link link-paired not-visible" aria-hidden="true" id="paired"></i>
+                    </div>
+                </div>
+                <div class="vel-temp">
+                    <div class="velocidad">
+                        <div class="velocidad-val" id="velocity">100</div>
+                        <div class="velocidad-unidad">Kmh</div>
+                    </div>
+                    <div class="temperatura">
+                        <div class="temperatura-val" id="temperature">25</div>
+                        <div class="temperatura-unidad">ºC</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./resources/js/BluetoothTerminal.js"></script>
+        <script src="./resources/js/script.js"></script>        
+        <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script-->
+    </body>
+</html>
