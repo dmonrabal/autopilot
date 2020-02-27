@@ -8,27 +8,27 @@
     "orientation": "landscape",
     "icons": [
         {
-            "src": "/resources/favicons/android-chrome-72x72.png",
+            "src": "resources/favicons/android-chrome-72x72.png",
             "type": "image/png",
             "sizes": "72x72"
         },
         {
-            "src": "/resources/favicons/apple-touch-icon.png",
+            "src": "resources/favicons/apple-touch-icon.png",
             "type": "image/png",
             "sizes": "76x76"
         },
         {
-            "src": "/resources/favicons/icon-16x16.png",
+            "src": "resources/favicons/icon-16x16.png",
             "type": "image/png",
             "sizes": "16x16"
         },
         {
-            "src": "/resources/favicons/icon-32x32.png",
+            "src": "resources/favicons/icon-32x32.png",
             "type": "image/png",
             "sizes": "32x32"
         },
         {
-            "src": "/resources/favicons/icon-150x150.png",
+            "src": "resources/favicons/icon-150x150.png",
             "type": "image/png",
             "sizes": "150x150"
         }
